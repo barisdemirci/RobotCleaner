@@ -8,7 +8,7 @@ namespace RobotCleaner.Engine.Directions
     {
         public override List<Location> Clean()
         {
-            for (int j = 0; j < Step; j++)
+            for (int i = 0; i < Step; i++)
             {
                 Location candidateLocation = new Location(Robot.Location.X, Robot.Location.Y + 1);
                 if (IsInRange(candidateLocation.Y))

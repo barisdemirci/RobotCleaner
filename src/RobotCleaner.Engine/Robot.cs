@@ -10,23 +10,30 @@ namespace RobotCleaner.Engine
         internal static Location Location;
         private List<Direction> commands;
 
-        public Robot(string locationOfRobot, List<string> commands)
+        public Robot(string locationOfRobot, List<string> commandsString)
         {
             Location = new Location();
             Location.X = int.Parse(locationOfRobot.Split(" ")[0]);
             Location.Y = int.Parse(locationOfRobot.Split(" ")[1]);
             this.commands = new List<Direction>();
-            foreach (var item in commands)
+            foreach (var item in commandsString)
             {
-                Direction direction = GetInstance(item.Split(" ")[0]);
+                Direction direction = GetInstanceOfDirection(item.Split(" ")[0]);
                 direction.Step = int.Parse(item.Split(" ")[1]);
                 this.commands.Add(direction);
             }
         }
 
+        /// <summary>
+        /// List of cleaned locations. This list may contain same location
+        /// </summary>
         internal List<Location> CleanedLocations { get; set; } = new List<Location>();
 
-        public void Start()
+        /// <summary>
+        /// Start Robot
+        /// </summary>
+        /// <returns>Count of Unique Locations</returns>
+        public int Start()
         {
             CleanedLocations.Add(Location);
 
@@ -35,9 +42,11 @@ namespace RobotCleaner.Engine
                 List<Location> cleanedLocations = commands[i].Clean();
                 CleanedLocations.AddRange(cleanedLocations);
             }
+            int countOfUniqueLocations = CountOfUniqueLocations();
+            return countOfUniqueLocations;
         }
 
-        public int CountOfUniqueLocations()
+        private int CountOfUniqueLocations()
         {
             List<Location> uniqueLocations = new List<Location>();
             foreach (var location in CleanedLocations)
@@ -50,7 +59,7 @@ namespace RobotCleaner.Engine
             return uniqueLocations.Count;
         }
 
-        private Direction GetInstance(string directionString)
+        private Direction GetInstanceOfDirection(string directionString)
         {
             Direction direction = null;
             switch (directionString)

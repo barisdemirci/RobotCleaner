@@ -32,8 +32,7 @@ namespace RobotCleaner
         private static int StartCleaning(string locationOfRobot, List<string> commands)
         {
             Robot robot = new Robot(locationOfRobot, commands);
-            robot.Start();
-            return robot.CountOfUniqueLocations();
+            return robot.Start();
         }
     }
 }

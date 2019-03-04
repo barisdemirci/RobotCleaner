@@ -23,8 +23,7 @@ namespace RobotCleaner.Engine.Tests
             Robot robot = new Robot(locationOfRobot, commands);
 
             // act
-            robot.Start();
-            int result = robot.CountOfUniqueLocations();
+            int result = robot.Start();
 
             // assert
             result.Should().Be(expectedCountOfCleanedClocation);
@@ -44,8 +43,7 @@ namespace RobotCleaner.Engine.Tests
             Robot robot = new Robot(locationOfRobot, commands);
 
             // act
-            robot.Start();
-            int result = robot.CountOfUniqueLocations();
+            int result = robot.Start();
 
             // assert
             result.Should().Be(expectedCountOfCleanedClocation);
@@ -65,8 +63,7 @@ namespace RobotCleaner.Engine.Tests
             Robot robot = new Robot(locationOfRobot, commands);
 
             // act
-            robot.Start();
-            int result = robot.CountOfUniqueLocations();
+            int result = robot.Start();
 
             // assert
             result.Should().Be(expectedCountOfCleanedClocation);
@@ -86,8 +83,7 @@ namespace RobotCleaner.Engine.Tests
             Robot robot = new Robot(locationOfRobot, commands);
 
             // act
-            robot.Start();
-            int result = robot.CountOfUniqueLocations();
+            int result = robot.Start();
 
             // assert
             result.Should().Be(expectedCountOfCleanedClocation);
@@ -107,8 +103,7 @@ namespace RobotCleaner.Engine.Tests
             Robot robot = new Robot(locationOfRobot, commands);
 
             // act
-            robot.Start();
-            int result = robot.CountOfUniqueLocations();
+            int result = robot.Start();
 
             // assert
             result.Should().Be(expectedCountOfCleanedClocation);
@@ -128,8 +123,7 @@ namespace RobotCleaner.Engine.Tests
             Robot robot = new Robot(locationOfRobot, commands);
 
             // act
-            robot.Start();
-            int result = robot.CountOfUniqueLocations();
+            int result = robot.Start();
 
             // assert
             result.Should().Be(expectedCountOfCleanedClocation);
@@ -149,8 +143,7 @@ namespace RobotCleaner.Engine.Tests
             Robot robot = new Robot(locationOfRobot, commands);
 
             // act
-            robot.Start();
-            int result = robot.CountOfUniqueLocations();
+            int result = robot.Start();
 
             // assert
             result.Should().Be(expectedCountOfCleanedClocation);
@@ -170,8 +163,7 @@ namespace RobotCleaner.Engine.Tests
             Robot robot = new Robot(locationOfRobot, commands);
 
             // act
-            robot.Start();
-            int result = robot.CountOfUniqueLocations();
+            int result = robot.Start();
 
             // assert
             result.Should().Be(expectedCountOfCleanedClocation);
@@ -195,8 +187,7 @@ namespace RobotCleaner.Engine.Tests
             Robot robot = new Robot(locationOfRobot, commands);
 
             // act
-            robot.Start();
-            int result = robot.CountOfUniqueLocations();
+            int result = robot.Start();
 
             // assert
             result.Should().Be(expectedCountOfCleanedClocation);
@@ -219,8 +210,7 @@ namespace RobotCleaner.Engine.Tests
             Robot robot = new Robot(locationOfRobot, commands);
 
             // act
-            robot.Start();
-            int result = robot.CountOfUniqueLocations();
+            int result = robot.Start();
 
             // assert
             result.Should().Be(expectedCountOfCleanedClocation);
