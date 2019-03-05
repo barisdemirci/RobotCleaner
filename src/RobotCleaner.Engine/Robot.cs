@@ -37,11 +37,12 @@ namespace RobotCleaner.Engine
         {
             CleanedLocations.Add(Location);
 
-            for (int i = 0; i < commands.Count; i++)
+            foreach (var item in commands)
             {
-                List<Location> cleanedLocations = commands[i].Clean();
+                List<Location> cleanedLocations = item.Clean();
                 CleanedLocations.AddRange(cleanedLocations);
             }
+
             int countOfUniqueLocations = CountOfUniqueLocations();
             return countOfUniqueLocations;
         }
